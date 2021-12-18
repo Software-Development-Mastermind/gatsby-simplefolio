@@ -74,6 +74,16 @@ $ npm install
 $ npm run develop
 ```
 
+If you run into issues with the above commands (and are on a Mac) run the following commands:
+
+```bash
+# Downgrade node to version 12
+$ sudo npm i node@12
+
+# Start development server
+$ npm run developer
+```
+
 Using Yarn:
 
 ```bash
