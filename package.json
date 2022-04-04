@@ -5,9 +5,12 @@
   "version": "0.1.0",
   "license": "MIT",
   "scripts": {
-    "set-nvm": "source ~/.nvm/nvm.sh && nvm install 14.19.0 && nvm use 14.19.0",
-    "install-nvm": "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash && export NVM_DIR=\"$HOME/.nvm\" && [ -s \"$NVM_DIR/nvm.sh\" ] && \\. \"$NVM_DIR/nvm.sh\" && [ -s \"$NVM_DIR/bash_completion\" ] && \\. \"$NVM_DIR/bash_completion\" && source ~/.nvm/nvm.sh",
-    "configure": "install-nvm && set-nvm",
+    "set-nvm-mac": "source ~/.nvm/nvm.sh && nvm install 14.19.0 && nvm use 14.19.0 && npm i",
+    "set-nvm-windows": "source ~/.nvm/nvm.sh && nvm install 14.19.0 && nvm use 14.19.0 && npm i",
+    "install-nvm-mac": "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash && export NVM_DIR=\"$HOME/.nvm\" && [ -s \"$NVM_DIR/nvm.sh\" ] && \\. \"$NVM_DIR/nvm.sh\" && [ -s \"$NVM_DIR/bash_completion\" ] && \\. \"$NVM_DIR/bash_completion\" && source ~/.nvm/nvm.sh",
+    "install-nvm-windows": "curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.1/install.sh | bash && source ~/.nvm/nvm.sh && nvm install 14.19.0 && nvm use 14.19.0 && npm i",
+    "configure-mac": "npm run install-nvm-mac && npm run set-nvm-mac",
+    "configure-windows": "npm run install-nvm-windows && npm run set-nvm-windows",
     "build": "gatsby build",
     "develop": "gatsby develop",
     "format": "prettier --write \"**/*.{js,jsx,json,md}\"",
@@ -39,7 +42,7 @@
     "react-scroll": "^1.7.16",
     "react-tilt": "^0.1.4",
     "sass": "^1.49.0",
-    "sass-loader": "^12.4.0"  
+    "sass-loader": "^12.4.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
